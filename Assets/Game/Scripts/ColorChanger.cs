@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
-    [SerializeField] private Material myMaterial;
+    [SerializeField] private Renderer myObject;
 
     public List<Color> colorList = new List<Color>();
 
@@ -12,7 +12,7 @@ public class ColorChanger : MonoBehaviour
     {
         if(colorIdx < colorList.Count)
         {
-            myMaterial.color = colorList[colorIdx];
+            myObject.material.color = colorList[colorIdx];
         }
     }
 }
