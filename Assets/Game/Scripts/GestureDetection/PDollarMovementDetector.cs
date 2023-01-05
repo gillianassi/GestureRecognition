@@ -7,13 +7,18 @@ public class PDollarMovementDetector : MonoBehaviour
 {
     public XRNode inputSource;
     public float inputThreshold = 0f;
-    public Transform movementSource;
+    public Transform ControllerMovementSource;
+    public Transform HandMovementSource;
 
-    private bool isMoving = false;
-    private List<Vector3> positionList = new List<Vector3>();
 
     public float PositionThresholdDistanceSqrd = 0.025f;
     public GameObject DebugCubePrefab;
+
+    private Transform currentMovementSource;
+
+    private bool isMoving = false;
+    private List<Vector3> positionList = new List<Vector3>();
+    private bool PrevButtonPress = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +30,7 @@ public class PDollarMovementDetector : MonoBehaviour
     void Update()
     {
         HandleInput();
+        UpdateMovement();
     }
 
     void HandleInput()
@@ -33,18 +39,34 @@ public class PDollarMovementDetector : MonoBehaviour
         var device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.triggerButton, out isPressed);
 
-        if (!isMoving && isPressed)
+        // check if a change happened
+        if(isPressed != PrevButtonPress)
         {
-            StartMovement();
+            if(isPressed)
+            {
+                HandleTriggerDown();
+            }
+            else
+            {
+                HandleTriggerUp();
+            }
         }
-        else if (isMoving && !isPressed)
-        {
-            EndMovement();
-        }
-        else if (isMoving && isPressed)
-        {
-            UpdateMovement();
-        }
+
+
+        PrevButtonPress = isPressed;
+
+    }
+
+    void HandleTriggerDown()
+    {
+        currentMovementSource = ControllerMovementSource;
+        StartMovement();
+    }
+
+    public void StartGestureMovement()
+    {
+        currentMovementSource = HandMovementSource;
+        StartMovement();
     }
 
     void StartMovement()
@@ -53,11 +75,23 @@ public class PDollarMovementDetector : MonoBehaviour
         isMoving = true;
         positionList.Clear();
         // insert the first position
-        positionList.Add(movementSource.position);
+        positionList.Add(currentMovementSource.position);
         AddDebugCube();
     }
 
-        void EndMovement()
+
+    void HandleTriggerUp()
+    {
+        EndMovement();
+    }
+
+
+    public void EndGestureMovement()
+    {
+        EndMovement();
+    }
+
+    void EndMovement()
     {
 
         Debug.Log("EndMovement");
@@ -66,13 +100,17 @@ public class PDollarMovementDetector : MonoBehaviour
 
     void UpdateMovement()
     {
+        if(!isMoving)
+        {
+            return;
+        }
 
         Vector3 lastPos = positionList[positionList.Count-1];
-        Vector3 currentPos = movementSource.position;
+        Vector3 currentPos = currentMovementSource.position;
         Vector3 movement = lastPos - currentPos;
         if (movement.sqrMagnitude > PositionThresholdDistanceSqrd)
         {
-            positionList.Add(movementSource.position);
+            positionList.Add(currentMovementSource.position);
             AddDebugCube();
         }
     }
@@ -81,8 +119,8 @@ public class PDollarMovementDetector : MonoBehaviour
     {
         if (DebugCubePrefab)
         {
-            Debug.Log(movementSource.position.ToString());
-            Destroy(Instantiate(DebugCubePrefab, movementSource.position, Quaternion.identity), 3f);
+            //Debug.Log(currentMovementSource.position.ToString());
+            Destroy(Instantiate(DebugCubePrefab, currentMovementSource.position, Quaternion.identity), 3f);
 
         }
     }

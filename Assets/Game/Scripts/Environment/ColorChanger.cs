@@ -7,12 +7,24 @@ public class ColorChanger : MonoBehaviour
     [SerializeField] private Renderer myObject;
 
     public List<Color> colorList = new List<Color>();
+    public List<Color> UnselectColorList = new List<Color>();
 
-   public void ChangeColor(int colorIdx)
+    private int CurrentColor = 0;
+
+    public void ChangeColor(int colorIdx)
     {
-        if(colorIdx < colorList.Count)
+        CurrentColor = colorIdx;
+        if (CurrentColor < colorList.Count)
         {
-            myObject.material.color = colorList[colorIdx];
+            myObject.material.color = colorList[CurrentColor];
+        }
+    }
+
+    public void Unselect()
+    {
+        if(CurrentColor < UnselectColorList.Count)
+        {
+            myObject.material.color = UnselectColorList[CurrentColor];
         }
     }
 }
