@@ -549,12 +549,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4934191100016569166, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
+      propertyPath: _selector
+      value: 
+      objectReference: {fileID: 1418243821}
+    - target: {fileID: 4934191100016569166, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
       propertyPath: _whenSelected.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4934191100016569166, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
       propertyPath: _whenUnselected.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4934191100016569166, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
       propertyPath: _whenSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -583,6 +587,18 @@ PrefabInstance:
     - target: {fileID: 4934191100016569166, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
       propertyPath: _whenUnselected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PDollarMovementDetector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656262044248317823, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
+      propertyPath: _transformFeatureConfigs._values.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656262044248317823, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
+      propertyPath: _transformFeatureConfigs._values.Array.data[0]._state
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656262044248317823, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
+      propertyPath: _transformFeatureConfigs._values.Array.data[0]._feature
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3a9ee100bb145c448c8a3fb017a23c4, type: 3}
@@ -2071,10 +2087,14 @@ PrefabInstance:
     - target: {fileID: 4934191100016569166, guid: 5013d8ed5bbf6754382db37fc061ec99, type: 3}
       propertyPath: _selector
       value: 
-      objectReference: {fileID: 1418243821}
+      objectReference: {fileID: 1441553928}
+    - target: {fileID: 4934191100016569166, guid: 5013d8ed5bbf6754382db37fc061ec99, type: 3}
+      propertyPath: _whenSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4934191100016569166, guid: 5013d8ed5bbf6754382db37fc061ec99, type: 3}
       propertyPath: _whenUnselected.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4934191100016569166, guid: 5013d8ed5bbf6754382db37fc061ec99, type: 3}
       propertyPath: _whenSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2111,6 +2131,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4934191100016569165, guid: 5013d8ed5bbf6754382db37fc061ec99, type: 3}
   m_PrefabInstance: {fileID: 1441553925}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1441553928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4934191100016569167, guid: 5013d8ed5bbf6754382db37fc061ec99, type: 3}
+  m_PrefabInstance: {fileID: 1441553925}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1529825902
 GameObject:
   m_ObjectHideFlags: 0

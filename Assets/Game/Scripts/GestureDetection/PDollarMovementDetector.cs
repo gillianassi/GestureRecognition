@@ -85,7 +85,6 @@ public class PDollarMovementDetector : MonoBehaviour
         EndMovement();
     }
 
-
     public void EndGestureMovement()
     {
         EndMovement();
