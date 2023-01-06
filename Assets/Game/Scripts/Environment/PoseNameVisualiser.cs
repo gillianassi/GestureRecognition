@@ -20,7 +20,7 @@ public class PoseNameVisualiser : MonoBehaviour
     }
 
     // Update is called once per frame
-    void SetTextToPoseName(string newText)
+    public void SetTextToPoseName(string newText)
     {
         Text.text = newText;
     }
