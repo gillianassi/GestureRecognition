@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4934191100016569167}
   - component: {fileID: 4934191100016569166}
   m_Layer: 0
-  m_Name: DoublePoint
+  m_Name: DoublePointPose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -43,6 +43,15 @@ public class PDollarGestureDetector : MonoBehaviour
         strokeList.Add(positionList);
     }
 
+    // ToDo: in screenspace with info available of base movement detector
+    public void AddScreenspaceStroke(List<Vector2> positionList)
+    {
+        //Debug.Log("adding stroke");
+        //AddDebugStroke(positionList);
+        //currentStroke++;
+        //strokeList.Add(positionList);
+    }
+
     public void ToggleCreationMode()
     {
         CreationMode = !CreationMode;

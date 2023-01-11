@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.Events;
 
-public class MovementDetector : MonoBehaviour
+public class BaseMovementDetector : MonoBehaviour
 {
     public PointVisualiserManager DebugPointVisualiserManager;
     public XRNode InputSource;
@@ -13,12 +13,17 @@ public class MovementDetector : MonoBehaviour
     public float PositionThresholdDistanceSqrd = 0.025f;
 
     [System.Serializable]
-    public class UnityStringEvent : UnityEvent<List<Vector3>> { }
-    public UnityStringEvent OnEndLine;
+    public class UnityPointListEvent : UnityEvent<List<Vector3>> { }
+    public UnityPointListEvent OnEndLine;
+
+    public UnityEvent OnUpdateMovement;
+
+
 
     private Transform currentMovementSource;
     private bool isMoving = false;
     private List<Vector3> positionList = new List<Vector3>();
+    private List<Vector2> screenSpacePositionList = new List<Vector2>();
     private bool PrevButtonPress = false;
 
 
@@ -78,8 +83,10 @@ public class MovementDetector : MonoBehaviour
     {
         isMoving = true;
         positionList.Clear();
+        screenSpacePositionList.Clear();
         // insert the first position
         positionList.Add(currentMovementSource.position);
+        screenSpacePositionList.Add(Camera.main.WorldToScreenPoint(currentMovementSource.position));
         AddDebugPoint();
     }
 
@@ -119,7 +126,9 @@ public class MovementDetector : MonoBehaviour
         if (movement.sqrMagnitude > PositionThresholdDistanceSqrd)
         {
             positionList.Add(currentMovementSource.position);
+            screenSpacePositionList.Add(Camera.main.WorldToScreenPoint(currentMovementSource.position));
             AddDebugPoint();
+            OnUpdateMovement.Invoke();
         }
     }
 
@@ -139,4 +148,65 @@ public class MovementDetector : MonoBehaviour
             DebugPointVisualiserManager.RemoveAllPoints();
         }
     }
+
+    public int GetPositionListCount()
+    {
+        return positionList.Count;
+    }
+
+    public Vector3 GetCurrentDirection()
+    {
+        if (positionList.Count < 2)
+        {
+            return Vector3.zero;
+        }
+        return (positionList[positionList.Count - 2] - positionList[positionList.Count - 1]).normalized ;
+    }
+
+    public Vector3 GetCurrentMovementPosition()
+    {
+        if(positionList.Count == 0)
+        {
+            return Vector3.zero ;
+        }
+
+        return positionList[positionList.Count - 1] ;
+    }
+    public Vector3 GetPreviousMovementPosition()
+    {
+        if(positionList.Count < 2)
+        {
+            return Vector3.zero;
+        }
+
+        return positionList[positionList.Count - 2] ;
+    }
+    public Vector2 GetCurrentDirectionSS()
+    {
+        if (screenSpacePositionList.Count < 2)
+        {
+            return Vector2.zero;
+        }
+        return (screenSpacePositionList[screenSpacePositionList.Count - 2] - screenSpacePositionList[screenSpacePositionList.Count - 1]).normalized;
+    }
+    public Vector2 GetCurrentMovementPositionSS()
+    {
+        if (screenSpacePositionList.Count == 0)
+        {
+            return Vector2.zero;
+        }
+
+        return screenSpacePositionList[screenSpacePositionList.Count - 1];
+    }
+    public Vector2 GetPreviousMovementPositionSS()
+    {
+        if(screenSpacePositionList.Count < 2)
+        {
+            return Vector2.zero;
+        }
+
+        return screenSpacePositionList[screenSpacePositionList.Count - 2] ;
+    }
+
+
 }

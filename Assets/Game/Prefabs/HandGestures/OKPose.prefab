@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1233367115863353425}
   - component: {fileID: 1233367115863353424}
   m_Layer: 0
-  m_Name: Peace
+  m_Name: OKPose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hand: {fileID: 1233367115863353439}
   _shapes:
-  - {fileID: 11400000, guid: 0fc69e67370d89d4681073ecd1cfa3ae, type: 2}
+  - {fileID: 11400000, guid: e7fe7a874f1f94441bb41d2f2ca532ec, type: 2}
 --- !u!114 &1233367115863353426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,10 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hand: {fileID: 1233367115863353439}
   _transformFeatureConfigs:
-    _values:
-    - _mode: 0
-      _feature: 4
-      _state: 12
+    _values: []
   _transformConfig:
     PositionOffset: {x: 0, y: 0, z: 0}
     RotationOffset: {x: 0, y: 0, z: 0}
@@ -102,7 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _activeStates:
   - {fileID: 1233367115863353438}
-  - {fileID: 1233367115863353426}
   _logicOperator: 0
 --- !u!114 &1233367115863353425
 MonoBehaviour:
