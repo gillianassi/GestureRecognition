@@ -42,6 +42,12 @@ public class DebugDisplay : MonoBehaviour
         Application.logMessageReceived -= HandleLog;
     }
 
+    public void ClearDebugLog()
+    {
+        logs.Clear();
+        Display.text = "";
+    }
+
 
     void HandleLog(string logString, string stackTrace, LogType type)
     {
@@ -60,13 +66,6 @@ public class DebugDisplay : MonoBehaviour
         }
 
         logs.Enqueue(newLog);
-
-
-
-        if (type == LogType.Log)
-        {
-            
-        }
 
         Display.text = "";
 
