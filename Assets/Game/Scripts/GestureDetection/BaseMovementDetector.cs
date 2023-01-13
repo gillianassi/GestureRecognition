@@ -108,7 +108,6 @@ public class BaseMovementDetector : MonoBehaviour
         isMoving = false;
         RemoveDebugPoints();
 
-        Debug.Log("Invoke On End line");
         OnEndLine.Invoke(positionList);
     }
 

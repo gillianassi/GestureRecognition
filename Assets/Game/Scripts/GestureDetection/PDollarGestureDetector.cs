@@ -37,7 +37,7 @@ public class PDollarGestureDetector : MonoBehaviour
 
     public void AddStroke(List<Vector3> positionList)
     {
-        Debug.Log("adding stroke");
+        //Debug.Log("adding stroke");
         AddDebugStroke(positionList);
         currentStroke++;
         strokeList.Add(positionList);
