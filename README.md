@@ -6,8 +6,12 @@ Virtual Reality is a growing platform where many controller input approaches are
 
 The use of poses can replicate simple gestures; however, more complex gestures will be hard to differentiate from each other. In the latter case, training sets can help to create a more in dept gesture recognition system. During this research, I would like to investigate and research the different methods to recognize gestures in VR and look at how multiple methods can be combined to create an optimal user experience. Furthermore, as a stretch goal, I would like to compare how challenging it is to implement these methods in Unity, Unreal Engine, and a C++ project using the Oculus SDK. 
 
+ # Technical details
+ ## Unity version
+2021.3.15f1 (LTS)
  
- # Packages used
+ ## Packages used
  
  - [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022)
  - [PDollar Point-Cloud Gesture Recognizer](https://assetstore.unity.com/packages/tools/input-management/pdollar-point-cloud-gesture-recognizer-21660)
+
