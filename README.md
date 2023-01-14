@@ -9,4 +9,5 @@ The use of poses can replicate simple gestures; however, more complex gestures w
  
  # Packages used
  
- - Oculus Interaction SDK
+ - [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022)
+ - [PDollar Point-Cloud Gesture Recognizer](https://assetstore.unity.com/packages/tools/input-management/pdollar-point-cloud-gesture-recognizer-21660)
