@@ -72,6 +72,13 @@ public class CameraBasedStrokeGestureDetector : MonoBehaviour, IActiveState
     // Start is called before the first frame update
     void Start()
     {
+        //Load pre-made gestures
+        TextAsset[] gesturesXml = Resources.LoadAll<TextAsset>("StrokeGestures/");
+        foreach (TextAsset gestureXml in gesturesXml)
+        {
+            trainingSet.Add(GestureIO.ReadGestureFromXML(gestureXml.text));
+        }
+        // Get all local gestures
         string[] gestureFiles = Directory.GetFiles(Application.persistentDataPath, "*.xml");
         foreach (var file in gestureFiles)
         {

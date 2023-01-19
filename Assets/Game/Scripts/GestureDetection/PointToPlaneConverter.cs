@@ -46,6 +46,11 @@ public class PointToPlaneConverter : MonoBehaviour
 
     public void AddStroke(List<Vector3> positionList)
     {
+        if (positionList.Count < 2)
+        {
+            return;
+        }
+
         AddDebugStroke(positionList);
         currentStroke++;
         strokeList.Add(positionList);

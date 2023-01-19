@@ -249,7 +249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c0fe73640615a499225d87aaf98e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 5063608138082421522}
+  Display: {fileID: 0}
+  Panel: {fileID: 5063608139096880915}
+  MaxNrOfLines: 8
 --- !u!1 &5063608139096880915
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Gesture Name = "Arrow Up">
+	<Stroke>
+		<Point X = "1592.013" Y = "1641.059" T = "0" Pressure = "0" />
+		<Point X = "1633.928" Y = "1414.12" T = "0" Pressure = "0" />
+		<Point X = "1794.629" Y = "1268.18" T = "0" Pressure = "0" />
+		<Point X = "1992.361" Y = "1131.52" T = "0" Pressure = "0" />
+	</Stroke>
+	<Stroke>
+		<Point X = "1592.013" Y = "1641.059" T = "0" Pressure = "0" />
+		<Point X = "1633.928" Y = "1414.12" T = "0" Pressure = "0" />
+		<Point X = "1794.629" Y = "1268.18" T = "0" Pressure = "0" />
+		<Point X = "1992.361" Y = "1131.52" T = "0" Pressure = "0" />
+	</Stroke>
+	<Stroke>
+		<Point X = "1592.013" Y = "1641.059" T = "0" Pressure = "0" />
+		<Point X = "1633.928" Y = "1414.12" T = "0" Pressure = "0" />
+		<Point X = "1794.629" Y = "1268.18" T = "0" Pressure = "0" />
+		<Point X = "1992.361" Y = "1131.52" T = "0" Pressure = "0" />
+	</Stroke>
+</Gesture>

@@ -27,6 +27,8 @@ public class DebugDisplay : MonoBehaviour
 
     public TMPro.TextMeshProUGUI Display;
 
+    public GameObject Panel;
+
     public int MaxNrOfLines = 8;
 
     private Queue<LogMessage> logs = new Queue<LogMessage>();
@@ -48,6 +50,15 @@ public class DebugDisplay : MonoBehaviour
         Display.text = "";
     }
 
+    public void DeactivatePanel()
+    {
+        Panel.SetActive(false);
+    }
+
+    public void ActivatePanel()
+    {
+        Panel.SetActive(true);
+    }
 
     void HandleLog(string logString, string stackTrace, LogType type)
     {
