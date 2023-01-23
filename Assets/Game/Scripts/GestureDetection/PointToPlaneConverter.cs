@@ -19,17 +19,17 @@ public class PointToPlaneConverter : MonoBehaviour
     }
 
     // Public variables
-    public PointVisualiserManager DebugPointVisualiserManager;
 
     private int currentStroke = 0;
     private List<List<Vector3>> strokeList = new List<List<Vector3>>();
+    public UnityEvent OnConversionCompleted;
+    public PointVisualiserManager DebugPointVisualiserManager;
 
     private PDollarGestureRecognizer.Point[] frontPoints;
     private PDollarGestureRecognizer.Point[] sidePoints;
     private PDollarGestureRecognizer.Point[] groundPoints;
     private PDollarGestureRecognizer.Point[] ssPoints;
 
-    public UnityEvent OnConversionCompleted;
 
     //----------------
     // Getters

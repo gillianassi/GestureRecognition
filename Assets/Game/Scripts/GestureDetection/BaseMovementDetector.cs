@@ -6,17 +6,18 @@ using UnityEngine.Events;
 
 public class BaseMovementDetector : MonoBehaviour
 {
-    public PointVisualiserManager DebugPointVisualiserManager;
     public XRNode InputSource;
     public Transform ControllerMovementSource;
     public Transform HandMovementSource;
-    public float PositionThresholdDistanceSqrd = 0.025f;
+    public float PositionThresholdDistance = 0.005f;
+
+    public UnityEvent OnUpdateMovement;
 
     [System.Serializable]
     public class UnityPointListEvent : UnityEvent<List<Vector3>> { }
     public UnityPointListEvent OnEndLine;
 
-    public UnityEvent OnUpdateMovement;
+    public PointVisualiserManager DebugPointVisualiserManager;
 
 
 
@@ -122,7 +123,7 @@ public class BaseMovementDetector : MonoBehaviour
         Vector3 lastPos = positionList[positionList.Count - 1];
         Vector3 currentPos = currentMovementSource.position;
         Vector3 movement = lastPos - currentPos;
-        if (movement.sqrMagnitude > PositionThresholdDistanceSqrd)
+        if (movement.sqrMagnitude > PositionThresholdDistance * PositionThresholdDistance)
         {
             positionList.Add(currentMovementSource.position);
             screenSpacePositionList.Add(Camera.main.WorldToScreenPoint(currentMovementSource.position));

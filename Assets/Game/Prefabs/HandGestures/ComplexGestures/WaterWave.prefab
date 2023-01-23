@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 4107636341849957246}
   - component: {fileID: 4107636341849957241}
   m_Layer: 0
-  m_Name: CounterClockwiseMovement Left
+  m_Name: ClockwiseMovement Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

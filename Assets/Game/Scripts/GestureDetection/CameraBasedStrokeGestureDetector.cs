@@ -113,6 +113,8 @@ public class CameraBasedStrokeGestureDetector : MonoBehaviour, IActiveState
 
         gestureResults.Clear();
 
+
+
         CheckAllGestrures();
     }
 
