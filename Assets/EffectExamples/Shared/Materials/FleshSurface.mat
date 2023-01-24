@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: FleshSurface
   m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
@@ -64,7 +64,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.471
+    - _Glossiness: 0.581
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -76,6 +76,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5808823, g: 0.502528, b: 0.43139052, a: 1}
-    - _EmissionColor: {r: 0.1544118, g: 0.036332183, b: 0.036332183, a: 1}
-    - _SpecColor: {r: 0.27357268, g: 0.36109945, b: 0.4044118, a: 1}
+    - _Color: {r: 0.28112563, g: 0.4528302, b: 0.1986472, a: 1}
+    - _EmissionColor: {r: 0.3679245, g: 0.050329305, b: 0.050329305, a: 1}
+    - _SpecColor: {r: 0.17528479, g: 0.26045182, b: 0.3679245, a: 1}
