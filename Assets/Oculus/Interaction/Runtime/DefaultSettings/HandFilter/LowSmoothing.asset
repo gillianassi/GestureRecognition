@@ -1,27 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cb1d32171371c744947b9c3f1911fb8, type: 3}
-  m_Name: LowSmoothing
-  m_EditorClassIdentifier: 
-  wristPositionParameters:
-    _minCutoff: 10
-    _beta: 10
-    _dCutoff: 1
-  wristRotationParameters:
-    _minCutoff: 10
-    _beta: 10
-    _dCutoff: 1
-  fingerRotationParameters:
-    _minCutoff: 10
-    _beta: 10
-    _dCutoff: 1
-  frequency: 72
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8d3ec9c23a182677ba2823305868ba30a7cdca3c08c552e1d3ba48c9f090d0c
+size 646
