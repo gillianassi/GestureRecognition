@@ -11,6 +11,7 @@ A functional method called Camera-Based Stroke Gesture detection, based on the $
  ## Unity version
  2021.3.15f1 (LTS)
  
+ 
  ## Packages used
  
  ### Essential
@@ -21,3 +22,12 @@ A functional method called Camera-Based Stroke Gesture detection, based on the $
  - [Unity Particle Pack](https://assetstore.unity.com/packages/essentials/tutorial-projects/unity-particle-pack-127325)
  - [Unity Particle Pack 5.x](https://assetstore.unity.com/packages/essentials/asset-packs/unity-particle-pack-5-x-73777)
  - [3D Game Kit](https://assetstore.unity.com/packages/templates/tutorials/3d-game-kit-115747)
+
+ # How to Make it work
+ 
+ 1. Install the correct Unity version.
+ 2. Download the repository from GitHub.
+ 3. Make sure you have an Horizon Developer Account and your Quest 2 linked to your computer.
+ 4. Launch Quest Link.
+ 5. Open the following Scene *Assets/Game/Scenes/ShowcaseScene.unity*.
+ 6. Play. :)
